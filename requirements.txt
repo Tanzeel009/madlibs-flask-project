@@ -1,0 +1,6 @@
+flask
+pywebview
+selenium
+pillow
+numpy
+webdriver-manager

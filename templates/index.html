@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MadLibs by Tanzeel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">✨ MadLibs Story Generator ✨</h1>
+        <form method="POST">
+            <input type="text" name="noun" placeholder="Enter a Noun" required>
+            <input type="text" name="verb" placeholder="Enter a Verb" required>
+            <input type="text" name="adjective" placeholder="Enter an Adjective" required>
+            <input type="text" name="place" placeholder="Enter a Place" required>
+            <button type="submit">Generate Story</button>
+        </form>
+
+        {% if story %}
+        <div class="story-box">
+            <h2>Your Story:</h2>
+            <p>{{ story }}</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <footer>
+        <p>© 2025 Tanzeel – All Rights Reserved</p>
+    </footer>
+</body>
+</html>

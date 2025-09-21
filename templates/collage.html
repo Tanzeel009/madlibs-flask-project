@@ -1,0 +1,9 @@
+<h2>🖼️ Create Collage</h2>
+<form method="POST">
+    <button type="submit">Generate Collage</button>
+</form>
+
+{% if collage_path %}
+    <h3>Collage Generated:</h3>
+    <img src="{{ url_for('static', filename=collage_path) }}" width="600">
+{% endif %}

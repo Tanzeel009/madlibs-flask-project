@@ -1,0 +1,11 @@
+<h2>📸 Batch Screenshots</h2>
+<form method="POST">
+    <button type="submit">Generate Screenshots</button>
+</form>
+
+{% if images %}
+    <h3>Generated Screenshots:</h3>
+    {% for img in images %}
+        <img src="{{ url_for('static', filename=img) }}" width="400"><br>
+    {% endfor %}
+{% endif %}
